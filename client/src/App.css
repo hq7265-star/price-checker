@@ -1,0 +1,602 @@
+/* ── Layout ── */
+.app {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a2e;
+}
+
+.main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: #4361ee;
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+/* ── Page layout ── */
+.page {
+  padding: 8px 0;
+}
+
+.page h2 {
+  font-size: 1.4rem;
+  margin: 0 0 4px;
+}
+
+.page-desc {
+  color: #666;
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.status-msg {
+  text-align: center;
+  color: #888;
+  padding: 32px 0;
+}
+
+/* ── Buttons ── */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  transition: background 0.2s;
+}
+
+.btn-secondary {
+  background: #e0e7ff;
+  color: #4361ee;
+}
+
+.btn-secondary:hover {
+  background: #c7d2fe;
+}
+
+.btn-secondary:disabled {
+  background: #e5e5e5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-small:hover {
+  background: #e0e0e0;
+}
+
+.btn-danger {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #fecaca;
+}
+
+/* ── Deals page ── */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #4361ee;
+}
+
+.search-form button {
+  background: #4361ee;
+  color: #fff;
+}
+
+.search-form button:hover {
+  background: #3a56d4;
+}
+
+.filters select {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #fff;
+  outline: none;
+}
+
+.deals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Deal card ── */
+.deal-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.deal-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.deal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.deal-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.deal-original {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.deal-source {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #888;
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.deal-title {
+  font-size: 1rem;
+  margin: 0 0 6px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.deal-title a {
+  color: #1a1a2e;
+  text-decoration: none;
+}
+
+.deal-title a:hover {
+  color: #4361ee;
+}
+
+.deal-desc {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.deal-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.deal-category {
+  background: #eef2ff;
+  color: #4361ee;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* ── Watchlist page ── */
+.watchlist-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.watchlist-form input,
+.watchlist-form select {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.watchlist-form input:focus {
+  border-color: #4361ee;
+}
+
+.watchlist-form input:first-child {
+  flex: 1;
+  min-width: 150px;
+}
+
+.watchlist-form input:nth-child(2) {
+  width: 120px;
+}
+
+.watchlist-form button {
+  background: #4361ee;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.watchlist-form button:hover {
+  background: #3a56d4;
+}
+
+.watchlist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.watchlist-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  gap: 12px;
+}
+
+.watchlist-card.inactive {
+  opacity: 0.5;
+}
+
+.watchlist-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.target-price {
+  font-size: 0.85rem;
+  color: #16a34a;
+  background: #f0fdf4;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.watchlist-category {
+  font-size: 0.75rem;
+  color: #4361ee;
+  background: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.watchlist-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* ── Settings page ── */
+.settings-form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.settings-form label {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.settings-form input {
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.settings-form input:focus {
+  border-color: #4361ee;
+}
+
+.settings-form button {
+  background: #4361ee;
+  color: #fff;
+  height: 42px;
+}
+
+.settings-form button:hover {
+  background: #3a56d4;
+}
+
+.save-confirmation {
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  align-self: center;
+}
+
+.settings-info {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.settings-info h3 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.settings-info p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 12px;
+}
+
+.settings-info ol {
+  padding-left: 20px;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.settings-info code {
+  background: #e5e7eb;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* ── Coles search page ── */
+.coles-search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.coles-search-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.coles-search-form input:focus {
+  border-color: #e01a22;
+}
+
+.coles-search-form button {
+  background: #e01a22;
+  color: #fff;
+  white-space: nowrap;
+  padding: 12px 20px;
+}
+
+.coles-search-form button:hover {
+  background: #c41620;
+}
+
+.coles-search-form button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.coles-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.coles-card {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.2s;
+}
+
+.coles-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.coles-card.on-special {
+  border-color: #e01a22;
+  border-width: 2px;
+}
+
+.coles-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f9f9f9;
+  flex-shrink: 0;
+}
+
+.coles-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.coles-brand {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.coles-name {
+  font-size: 1rem;
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.coles-size {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.coles-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.coles-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.coles-was {
+  font-size: 0.9rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.coles-special {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.special-badge {
+  background: #e01a22;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.save-text {
+  color: #e01a22;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.coles-multibuy {
+  background: #fff3cd;
+  color: #856404;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.coles-unit {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.coles-link {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #e01a22;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.coles-link:hover {
+  background: #c41620;
+}
