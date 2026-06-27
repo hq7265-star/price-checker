@@ -17,6 +17,7 @@
     "express": "^5.2.1",
     "node-cron": "^4.5.0",
     "nodemailer": "^9.0.1",
+    "puppeteer-core": "^24.43.1",
     "rss-parser": "^3.13.0",
     "sql.js": "^1.14.1"
   }

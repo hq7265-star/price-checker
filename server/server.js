@@ -8,6 +8,7 @@ const dealsRouter = require('./routes/deals');
 const watchlistRouter = require('./routes/watchlist');
 const settingsRouter = require('./routes/settings');
 const colesRouter = require('./routes/coles');
+const compareRouter = require('./routes/compare');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -19,6 +20,7 @@ app.use('/api/deals', dealsRouter);
 app.use('/api/watchlist', watchlistRouter);
 app.use('/api/settings', settingsRouter);
 app.use('/api/coles', colesRouter);
+app.use('/api/compare', compareRouter);
 
 async function start() {
   await initDatabase();

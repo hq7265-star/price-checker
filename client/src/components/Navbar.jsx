@@ -5,11 +5,14 @@ export default function Navbar() {
     <nav className="navbar">
       <h1 className="nav-title">Discount Tracker</h1>
       <div className="nav-links">
-        <NavLink to="/" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          Deals
+        <NavLink to="/" end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          Compare
         </NavLink>
         <NavLink to="/coles" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           Coles
+        </NavLink>
+        <NavLink to="/deals" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          Deals
         </NavLink>
         <NavLink to="/watchlist" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           Watchlist

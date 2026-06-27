@@ -11,7 +11,8 @@ router.get('/search', async (req, res) => {
   }
 
   try {
-    const products = await searchColes(q.trim());
+    const allProducts = await searchColes(q.trim());
+    const products = allProducts.filter((p) => p.price != null);
     res.json({ query: q, count: products.length, products });
   } catch (err) {
     console.error('Coles search error:', err.message);

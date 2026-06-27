@@ -62,7 +62,9 @@ export default function ColesSearchPage() {
                 <div className="coles-size">{p.size}</div>
 
                 <div className="coles-pricing">
-                  <span className="coles-price">${p.price?.toFixed(2)}</span>
+                  {p.price != null && (
+                    <span className="coles-price">${p.price.toFixed(2)}</span>
+                  )}
                   {p.wasPrice && (
                     <span className="coles-was">Was ${p.wasPrice.toFixed(2)}</span>
                   )}

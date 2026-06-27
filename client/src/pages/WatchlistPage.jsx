@@ -42,7 +42,7 @@ export default function WatchlistPage() {
   async function handleToggle(item) {
     try {
       const updated = await api.updateWatchlistItem(item.id, {
-        is_active: item.is_active ? 0 : 1,
+        is_active: !item.is_active,
       });
       setItems(items.map((i) => (i.id === item.id ? updated : i)));
     } catch (err) {

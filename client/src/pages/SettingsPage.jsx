@@ -47,12 +47,12 @@ export default function SettingsPage() {
 
       <div className="settings-info">
         <h3>Email Setup Guide</h3>
-        <p>To enable email notifications, you need to configure Gmail SMTP in the server's <code>.env</code> file:</p>
+        <p>Email notifications are sent via <a href="https://resend.com" target="_blank" rel="noopener noreferrer">Resend</a> through Supabase Edge Functions.</p>
         <ol>
-          <li>Enable 2-Factor Authentication on your Google account</li>
-          <li>Go to <strong>Google Account &gt; Security &gt; App Passwords</strong></li>
-          <li>Create an App Password for "Mail"</li>
-          <li>Add <code>EMAIL_USER</code> and <code>EMAIL_PASS</code> to the <code>.env</code> file</li>
+          <li>Create a free account at <strong>resend.com</strong></li>
+          <li>Get your API key from the Resend dashboard</li>
+          <li>In your Supabase project, go to <strong>Edge Functions &gt; Secrets</strong></li>
+          <li>Add a secret: <code>RESEND_API_KEY</code> = your Resend API key</li>
         </ol>
       </div>
     </div>
